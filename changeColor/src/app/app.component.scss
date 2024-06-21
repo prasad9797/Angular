@@ -1,0 +1,11 @@
+header {
+  margin: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

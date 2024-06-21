@@ -1,0 +1,11 @@
+<main>
+  <header [ngStyle]="{ color: currColor }">Change color on button click</header>
+  <div class="container">
+    <app-postcard
+      *ngFor="let post of posts; let i = index"
+      [post]="post"
+      [isClicked]="clickedPostId === post.id ? true : false"
+      (onClick)="clickedPost($event)"
+    ></app-postcard>
+  </div>
+</main>
