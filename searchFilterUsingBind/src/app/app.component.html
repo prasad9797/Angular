@@ -1,0 +1,13 @@
+<div class="container">
+  <input
+    type="text"
+    placeholder="Search city name"
+    [(ngModel)]="inputText"
+    (keyup)="search()"
+  />
+  <ul (click)="selectResult($event)">
+    <li *ngFor="let item of searchResults">
+      {{ item }}
+    </li>
+  </ul>
+</div>
