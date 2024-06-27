@@ -1,0 +1,20 @@
+<input type="text" placeholder="Search" (input)="onSearch($event)" />
+<ul>
+  <li *ngFor="let book of filteredBooks">
+    <div class="container">
+      <img [src]="book.picture" alt="thumbnail" />
+      <div class="text-content">
+        <h4>{{ book.title }}</h4>
+        <span *ngIf="book.publisher.length !== 0"
+          >Publisher: {{ book.publisher }}</span
+        >
+        <span *ngIf="book.publish_date.length !== 0"
+          >Publisher Date: {{ book.publish_date.length }}</span
+        >
+        <span *ngIf="book.description.length !== 0"
+          >Description: {{ book.description }}</span
+        >
+      </div>
+    </div>
+  </li>
+</ul>
